@@ -1,0 +1,353 @@
+/*ESTILOS GENERALES*/
+@font-face {
+  font-family: 'MiFuenteF1Bold';           
+  src: url('../fonts/Formula1-Bold_web_0.ttf') format('truetype');
+  font-weight: normal;              
+  font-style: normal;              
+}
+
+@font-face {
+  font-family: 'MiFuenteF1Regular';           
+  src: url('../fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-weight: normal;              
+  font-style: normal;              
+}
+
+:root {
+    --color-primary: #06333D;
+    --color-secondary: #F7A817;
+    --color-text: #F7EAC4;
+}
+
+body {
+    background: var(--color-primary);
+    font-family: 'MiFuenteF1Bold', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.grid-layout {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "navbar navbar"
+                         "intro intro"
+                         "sobre-nosotros sobre-nosotros"
+                         "menu menu"
+                         "ubicacion ubicacion"
+                         "footer footer";
+    grid-template-rows: auto;
+}
+
+.caja {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 20px;
+}
+
+/*NAVBAR*/
+.c1 {
+    grid-area: navbar;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 250px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.c1 ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.c1 li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.c1 li a:hover, 
+.c1 li a:focus {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.c1 li a.activo {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/*INTRO*/
+.c2 {
+    grid-area: intro;
+    background-image: url(../img/hamburguesa6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.c2_contenido {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 600px;
+    text-align: center; 
+}
+
+.c2 h1, .c2 h4 {
+    margin: 0;
+    padding: 10px;
+}
+
+.c2 h1 {
+    font-size: 48px;
+}
+
+.c2 h4 {
+    font-size: 24px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.btn_carta {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*SOBRE NOSOTROS*/
+.c3 {
+    grid-area: sobre-nosotros;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.c3_contenido {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 600px;
+    text-align: center; 
+}
+
+.c3_contenido h1 {
+    font-size: 48px;
+    margin: 0 0 30px 0;
+    display: inline-block;
+    border-bottom: 2.5px solid var(--color-secondary);
+}
+
+.c3_contenido h4 {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+/*MENU*/
+.c4 {
+    grid-area: menu;
+    background-image: url(../img/carta-fondo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.c4 h1 {
+    font-size: 48px;
+    display: inline-block;
+    border-bottom: 2.5px solid var(--color-secondary);
+}
+
+.btn_carta:hover {
+    background-color: var(--color-text);
+    color: var(--color-secondary);
+}
+
+/*UBICACION*/
+.c5 {
+    grid-area: ubicacion;
+    background-color: var(--color-primary);
+    padding: 20px 380px;
+}
+
+.c5_contenido h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 2.5px solid var(--color-secondary);
+}
+
+.c5_contenido p {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.c5_detalles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.horarios .dia {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.horarios h4 {
+    margin: 0;
+}
+
+.horarios p {
+    margin: 0;
+}
+
+/*FOOTER*/
+.c6 {
+    grid-area: footer;
+    background-color: var(--color-primary);
+}
+
+.c6_contenido h4 {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.contenido_iconos_c6 {
+    grid-area: navbar;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 250px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.contenido_iconos_c6 ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido_iconos_c6 li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+.redes li a {
+    color: var(--color-text);
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.redes li a:hover {
+    color: var(--color-secondary);
+}
+
+.contacto {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto li {
+    margin-bottom: 10px;
+}
+
+.contacto i {
+    margin-right: 10px;
+    color: var(--color-text);
+    font-size: 30px;
+}
+
+.contacto li i:hover {
+    color: var(--color-secondary);
+}
+
+.web:hover {
+    color: var(--color-secondary);
+}
+
+/*SEPARADOR*/
+.separador {
+    width: 95%;
+    height: 2px;
+    background-color: var(--color-secondary);
+    margin: 0 auto 20px;
+}
+
+/*BOTON SUBIR*/
+.btn-subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-subir:hover {
+  transform: translateY(-4px);
+  background: var(--color-text);
+  color: var(--color-secondary);
+}
+
+.btn-subir.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*AL HACER SCROLL*/
+/* Animaciones de aparición */
+.caja {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.caja.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

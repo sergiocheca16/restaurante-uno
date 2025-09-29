@@ -1,0 +1,74 @@
+/* 📱 Móviles */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .c1 {
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .c1 ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;            
+    text-align: center; 
+  }
+
+  .c1 li a {
+    display: block;
+    padding: 7px;
+  }
+
+  .logo_foto {
+    display: none;
+  }
+
+  /* Grids en 1 columna */
+  .c3_contenido,
+  .c4_contenido,
+  .c5_contenido,
+  .c6_contenido {
+    grid-template-columns: 1fr;
+    margin: 10px;
+  }
+
+  /* Footer */
+  .contenido_iconos_c7 {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  .contacto li {
+    font-size: 14px;
+  }
+
+  .contacto i {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Extra pequeño (menos de 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .btn_carta {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .hamburguesa p {
+    font-size: 12px;
+  }
+
+  .redes li a {
+    font-size: 24px;
+  }
+
+  .contacto i {
+    font-size: 24px;
+  }
+}

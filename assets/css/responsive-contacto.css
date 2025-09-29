@@ -1,0 +1,89 @@
+/* 📱 Móviles */
+@media (max-width: 768px) {
+  /* NAVBAR en columna */
+  .c1 {
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .c1 ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;            
+    text-align: center; 
+  }
+
+  .c1 li a {
+    display: block;
+    padding: 7px;
+  }
+
+  .logo_foto {
+    display: none;
+  }
+
+  /* Hamburguesas en 1 columna */
+  .c2_contenido {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    margin: 10px;
+  }
+
+  .hamburguesa {
+    height: auto;
+  }
+
+  .hamburguesa img {
+    max-height: 200px;
+  }
+
+  /* Footer apilado */
+  .contenido_iconos_c3 {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  .contacto li {
+    font-size: 14px;
+  }
+
+  .contacto i {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Extra pequeño */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .c2 h4 {
+    font-size: 14px;
+    margin: 15px 10px;
+  }
+
+  .hamburguesa h3 {
+    font-size: 16px;
+  }
+
+  .hamburguesa p {
+    font-size: 12px;
+  }
+
+  .btn-subir {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .redes li a {
+    font-size: 24px;
+  }
+
+  .contacto i {
+    font-size: 22px;
+  }
+}

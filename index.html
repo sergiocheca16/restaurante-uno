@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="ico" href="./assets/img/logo.ico">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <title>Checa's Burger</title>
+</head>
+<body>
+    <div class="grid-layout">
+        <div class="caja c1">
+            <a href="index.html" class="logo_foto">
+                <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+            </a>   
+            <ul>
+                <li><a href="index.html" class="activo">INICIO</a></li>
+                <li><a href="carta.html">CARTA</a></li>
+                <li><a href="menu-del-dia.html">MENU DEL DIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </div> 
+        <div class="caja c2">
+            <div class="c2_contenido">
+                <h1>Checa's Burger: Más que burgers.</h1>
+                <h4>Nacimos con la obsesión de hacer la hamburguesa perfecta. Además tenemos los mejores entrandas y unos postres espectaculares.</h4>
+                <a href="carta.html" class="btn_carta">CARTA</a>
+            </div>
+        </div>
+        <div class="caja c3">
+            <div class="c3_contenido">
+                <h1>SOBRE NOSOTROS</h1>
+                <h4>En Checa's Burger creemos que una buena hamburguesa puede alegrarte el día.</h4> 
+                <h4>Con ingredientes frescos, carne de calidad y sabores únicos, cada bocado es una experiencia que querrás repetir.</h4> 
+                <h4>Ven y descubre por qué nuestras hamburguesas son más que comida… ¡son pasión en cada mordisco!</h4>
+            </div>
+        </div> 
+        <div class="caja c4">
+            <div class="c4_contenido">
+                <h1>CARTA</h1>
+                <ul>
+                    <li><a href="carta.html#hamburguesas" class="btn_carta">HAMBURGUESAS</a></li>
+                    <li><a href="carta.html#entrantes" class="btn_carta">ENTRANTES</a></li>
+                    <li><a href="carta.html#postres" class="btn_carta">POSTRES</a></li>
+                    <li><a href="carta.html#bebidas" class="btn_carta">BEBIDAS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="caja c5">
+            <div class="c5_contenido">
+                <h1>UBICACIÓN</h1>
+                <div class="c5_detalles">
+                    <div class="horarios">
+                        <div class="dia">
+                            <h4>LUNES</h4>
+                            <p>CERRADO</p>
+                        </div>
+                        <div class="dia">
+                            <h4>MARTES</h4>
+                            <p>13:00 - 00:00</p>
+                        </div>
+                        <div class="dia">
+                            <h4>MIÉRCOLES</h4>
+                            <p>13:00 - 00:00</p>
+                        </div>
+                        <div class="dia">
+                            <h4>JUEVES</h4>
+                            <p>13:00 - 00:00</p>
+                        </div>
+                        <div class="dia">
+                            <h4>VIERNES</h4>
+                            <p>13:00 - 01:00</p>
+                        </div>
+                        <div class="dia">
+                            <h4>SÁBADO</h4>
+                            <p>13:00 - 01:00</p>
+                        </div>
+                        <div class="dia">
+                            <h4>DOMINGO</h4>
+                            <p>13:00 - 01:00</p>
+                        </div>
+                    </div>
+                    <div class="mapa">
+                        <a href="https://www.google.com/maps" target="_blank">
+                            <img src="./assets/img/ubicacion.png" alt="ubicacion" width="500px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="caja c6">
+            <div class="separador"></div>
+            <div class="c6_contenido">
+                <div class="contenido_iconos_c6">
+                    <a href="index.html">
+                        <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+                    </a>
+                    <ul class="redes">
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                    <ul class="contacto">
+                        <li><a href="mailto:info@checasburger.com" target="_blank"><i class="fa-solid fa-envelope"></i>info@checasburger.com</a></li>
+                        <li><a href="https://wa.me/34666666666" target="_blank"><i class="fa-brands fa-whatsapp"></i> +34 666 666 666</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank"><i class="fa-solid fa-location-dot"></i> Calle Inventada 33, Madrid, 22022</a></li>
+                    </ul>
+                </div>
+                <h4>© 2025 Checa's Burger. Todos los derechos reservados.</h4>
+                <a href="https://checasweb.com" target="_blank" class="web">Desarrollado por Checasweb</a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn-subir">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+<script>
+  //Boton subir
+  const btnSubir = document.querySelector('.btn-subir');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btnSubir.classList.add('visible');
+    } else {
+      btnSubir.classList.remove('visible');
+    }
+  });
+
+  //Animacion al hacer scroll
+  const cajas = document.querySelectorAll('.caja');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Si quieres que se repita al salir/comenzar, quita la siguiente línea
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cajas.forEach(caja => {
+    observer.observe(caja);
+  });
+</script>
+</html>

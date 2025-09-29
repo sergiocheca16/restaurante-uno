@@ -1,0 +1,404 @@
+/*ESTILOS GENERALES*/
+@font-face {
+  font-family: 'MiFuenteF1Bold';           
+  src: url('../fonts/Formula1-Bold_web_0.ttf') format('truetype');
+  font-weight: normal;              
+  font-style: normal;              
+}
+
+@font-face {
+  font-family: 'MiFuenteF1Regular';           
+  src: url('../fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-weight: normal;              
+  font-style: normal;              
+}
+
+:root {
+    --color-primary: #06333D;
+    --color-secondary: #F7A817;
+    --color-text: #F7EAC4;
+}
+
+body {
+    background: var(--color-primary);
+    font-family: 'MiFuenteF1Bold', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--color-text);
+}
+
+/*.grid-layout {
+    height: 2800px;
+    display: grid;
+    grid-template-areas: "navbar navbar"
+                         "menu menu"
+                         "entrantes entrantes"
+                         "hamburguesas hamburguesas"
+                         "postres postres"
+                         "bebidas bebidas"
+                         "footer footer";
+    grid-template-rows: 8% 8% 23% 32% 13% 8% 8%;
+}*/
+
+.grid-layout {
+    min-height: 100vh;       
+    display: grid;
+    grid-template-areas: 
+        "navbar"
+        "menu"
+        "entrantes"
+        "hamburguesas"
+        "postres"
+        "bebidas"
+        "footer";
+    grid-template-rows: auto; 
+}
+
+.caja {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    display: inline-block;
+    border-bottom: 2.5px solid var(--color-secondary);
+}
+
+/*NAVBAR*/
+.c1 {
+    grid-area: navbar;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 250px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.c1 ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.c1 li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.c1 li a:hover, 
+.c1 li a:focus {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.c1 li a.activo {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/*CARTA MENU*/
+.c2 {
+    grid-area: menu;
+    background-color: var(--color-secondary);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.c2 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.btn_carta {
+    background-color: var(--color-primary);
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/*ENTRANTES*/
+.c3 {
+    grid-area: entrantes;
+    background-color: var(--color-primary);
+}
+
+.c3_contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 275px;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.entrante {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.entrante p {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.entrante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/*HAMBURGUESAS*/
+.c4 {
+    grid-area: hamburguesas;
+    background-color: var(--color-primary);
+}
+
+.c4_contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 390px;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hamburguesa {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hamburguesa p {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.hamburguesa img {
+    width: 100%;
+    height: 254px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/*POSTRES*/
+.c5 {
+    grid-area: postres;
+    background-color: var(--color-primary);
+}
+
+.c5_contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 275px;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.postre {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.postre p {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.postre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/*BEBIDAS*/
+.c6 {
+    grid-area: bebidas;
+    background-color: var(--color-primary);
+}
+
+.c6_contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+/*FOOTER*/
+.c7 {
+    grid-area: footer;
+    background-color: var(--color-primary);
+}
+
+.c7_contenido h4 {
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.contenido_iconos_c7 {
+    grid-area: navbar;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 250px;
+    font-family: 'MiFuenteF1Regular', Arial, Helvetica, sans-serif;
+}
+
+.contenido_iconos_c7 ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido_iconos_c7 li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+.redes li a {
+    color: var(--color-text);
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.redes li a:hover {
+    color: var(--color-secondary);
+}
+
+.contacto {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto li {
+    margin-bottom: 10px;
+}
+
+.contacto i {
+    margin-right: 10px;
+    color: var(--color-text);
+    font-size: 30px;
+}
+
+.contacto li i:hover {
+    color: var(--color-secondary);
+}
+
+.web:hover {
+    color: var(--color-secondary);
+}
+
+/*SEPARADOR*/
+.separador {
+    width: 95%;
+    height: 2px;
+    background-color: var(--color-secondary);
+    margin: 0 auto 20px;
+}
+
+/*BOTON SUBIR*/
+.btn-subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-subir:hover {
+  transform: translateY(-4px);
+  background: var(--color-text);
+  color: var(--color-secondary);
+}
+
+.btn-subir.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*EFECTO AL HACER SCROLL*/
+/* Animaciones de aparición */
+.caja {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.caja.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

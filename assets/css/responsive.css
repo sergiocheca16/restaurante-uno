@@ -1,0 +1,118 @@
+/* Para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .c1 {
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .c1 ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;            /* Que ocupe el ancho */
+    text-align: center; 
+  }
+
+  .c1 li a {
+    display: block;
+    padding: 7px;
+  }
+
+  .logo_foto {
+    display: none;
+  }
+
+  /* INTRO */
+  .c2_contenido {
+    width: 90%;
+  }
+
+  .c2 h1 {
+    font-size: 28px;
+  }
+
+  .c2 h4 {
+    font-size: 16px;
+  }
+
+  /* SOBRE NOSOTROS */
+  .c3_contenido {
+    width: 90%;
+  }
+
+  .c3_contenido h1 {
+    font-size: 28px;
+  }
+
+  .c3_contenido h4 {
+    font-size: 14px;
+  }
+
+  /* CARTA */
+  .c4 h1 {
+    font-size: 28px;
+  }
+
+  .btn_carta {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  /* UBICACIÓN */
+  .c5 {
+    padding: 20px;
+  }
+
+  .c5_detalles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mapa img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  /* FOOTER */
+  .contenido_iconos_c6 {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  .contacto li {
+    font-size: 14px;
+  }
+
+  .contacto i {
+    font-size: 20px;
+  }
+}
+
+/* Para pantallas muy pequeñas (hasta 480px - móviles pequeños) */
+@media (max-width: 480px) {
+  .c1 ul {
+    display: none; /* 👈 aquí ocultamos el menú */
+  }
+
+  .c2 h1 {
+    font-size: 22px;
+  }
+
+  .c2 h4 {
+    font-size: 14px;
+  }
+
+  .c3_contenido h1,
+  .c4 h1,
+  .c5_contenido h1 {
+    font-size: 22px;
+  }
+
+  .btn_carta {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

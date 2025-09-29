@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="ico" href="./assets/img/logo.ico">
+
+    <link rel="stylesheet" href="./assets/css/menu-del-dia.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsive-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Checa's Burger</title>
+</head>
+<body>
+    <div class="grid-layout">
+        <div class="caja c1">
+            <a href="index.html" class="logo_foto">
+                <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+            </a>   
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="carta.html">CARTA</a></li>
+                <li><a href="menu-del-dia.html" class="activo">MENU DEL DIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </div>
+        <div class="caja c2">
+            <h1>MENÚ DEL DÍA</h1>
+            <h4>Disfruta de nuestro menú del día por 12.95€, de lunes a viernes de 13:00 h. a 17:00 h. (días destivos no incluidos).</h4>
+            <h4>El menú incluye: plato principal (burger a elegir entre 3) + patatas fritas + bebida + postre o café.</h4>
+            <div class="c2_contenido">
+                <div class="hamburguesa">
+                    <h3>Hamburguesa Original</h3>
+                    <p>10,50€</p>
+                    <img src="./assets/img/hamburguesa-original.png" alt="hamburguesa-original">
+                    <p>Clásica y sencilla, con un jugoso filete de carne de res, lechuga fresca, tomate en rodajas, cebolla y un toque de tu salsa favorita, todo dentro de un pan ligeramente tostado.</p>
+                </div>
+                <div class="hamburguesa">
+                    <h3>La Doble</h3>
+                    <p>13,00€</p>
+                    <img src="./assets/img/hamburguesa-doble.png" alt="hamburguesa-doble">
+                    <p>Para los más carnívoros, con dos filetes de carne de res perfectamente cocinados, acompañados de lechuga, tomate, cebolla y salsa especial, en un pan que soporta todo el sabor.</p>
+                </div>
+                <div class="hamburguesa">
+                    <h3>Cheese</h3>
+                    <p>11,50€</p>
+                    <img src="./assets/img/hamburguesa-queso.png" alt="hamburguesa-queso">
+                    <p>Jugosa carne de res cubierta con queso cheddar fundido, que se derrite sobre la carne caliente, complementada con lechuga fresca, tomate y un poco de salsa que realza el sabor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="caja c3">
+            <div class="separador"></div>
+            <div class="c3_contenido">
+                <div class="contenido_iconos_c3">
+                    <a href="index.html">
+                        <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+                    </a>
+                    <ul class="redes">
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                    <ul class="contacto">
+                        <li><a href="mailto:info@checasburger.com" target="_blank"><i class="fa-solid fa-envelope"></i>info@checasburger.com</a></li>
+                        <li><a href="https://wa.me/34666666666" target="_blank"><i class="fa-brands fa-whatsapp"></i> +34 666 666 666</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank"><i class="fa-solid fa-location-dot"></i> Calle Inventada 33, Madrid, 22022</a></li>
+                    </ul>
+                </div>
+                <h4>© 2025 Checa's Burger. Todos los derechos reservados.</h4>
+                <a href="https://checasweb.com" target="_blank" class="web">Desarrollado por Checasweb</a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn-subir">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+<script>
+  //Boton subir
+  const btnSubir = document.querySelector('.btn-subir');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btnSubir.classList.add('visible');
+    } else {
+      btnSubir.classList.remove('visible');
+    }
+  });
+
+  //Animacion al hacer scroll
+   const elementos = document.querySelectorAll('.caja, .hamburguesa');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elementos.forEach(el => observer.observe(el));
+</script>
+</html>

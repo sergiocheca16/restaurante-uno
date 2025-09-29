@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="ico" href="./assets/img/logo.ico">
+
+    <link rel="stylesheet" href="./assets/css/contacto.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsive-contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Checa's Burger</title>
+</head>
+<body>
+    <div class="grid-layout">
+        <div class="caja c1">
+            <a href="index.html" class="logo_foto">
+                <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+            </a>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="carta.html">CARTA</a></li>
+                <li><a href="menu-del-dia.html">MENU DEL DIA</a></li>
+                <li><a href="contacto.html" class="activo">CONTACTO</a></li>
+            </ul>
+        </div>
+        <div class="caja c2">
+            <h1>CONTACTO</h1>
+            <div class="c2_contenido">
+                <div class="cajita">
+                    <h3>Información de contacto</h3>
+                    <ul>
+                        <li><a href="https://www.google.com/maps" target="_blank"><i class="fa-solid fa-location-dot"></i> Calle Inventada 33, Madrid, 22022</a></li>
+                        <li><a href="https://wa.me/34666666666" target="_blank"><i class="fa-brands fa-whatsapp"></i> +34 666 666 666</a></li>
+                        <li><a href="mailto:info@checasburger.com" target="_blank"><i class="fa-solid fa-envelope"></i>info@checasburger.com</a></li>
+                    </ul>
+                </div>
+                <div class="cajita">
+                    <h3>Nuestras redes</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div class="cajita">
+                    <h3>Horarios</h3>
+                    <ul>
+                        <li><span>LUNES</span> <span class="hora">CERRADO</span></li>
+                        <li><span>MARTES</span> <span class="hora">13:00 - 00:00</span></li>
+                        <li><span>MIÉRCOLES</span> <span class="hora">13:00 - 00:00</span></li>
+                        <li><span>JUEVES</span> <span class="hora">13:00 - 00:00</span></li>
+                        <li><span>VIERNES</span> <span class="hora">13:00 - 01:00</span></li>
+                        <li><span>SÁBADO</span> <span class="hora">13:00 - 01:00</span></li>
+                        <li><span>DOMINGO</span> <span class="hora">13:00 - 00:00</span></li>
+                    </ul>
+                </div>
+                <div class="cajita">
+                    <h3>Ubicación</h3>
+                    <a href="https://www.google.com/maps" target="_blank">
+                        <img src="./assets/img/ubicacion.png" alt="ubicacion" width="500px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="caja c3">
+            <div class="separador"></div>
+            <div class="c3_contenido">
+                <div class="contenido_iconos_c3">
+                    <a href="index.html">
+                        <img src="./assets/img/logo-resturante.png" alt="Logo Checa's Burger" width="100px">
+                    </a>
+                    <ul class="redes">
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                    <ul class="contacto">
+                        <li><a href="mailto:info@checasburger.com" target="_blank"><i class="fa-solid fa-envelope"></i>info@checasburger.com</a></li>
+                        <li><a href="https://wa.me/34666666666" target="_blank"><i class="fa-brands fa-whatsapp"></i> +34 666 666 666</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank"><i class="fa-solid fa-location-dot"></i> Calle Inventada 33, Madrid, 22022</a></li>
+                    </ul>
+                </div>
+                <h4>© 2025 Checa's Burger. Todos los derechos reservados.</h4>
+                <a href="https://checasweb.com" target="_blank" class="web">Desarrollado por Checasweb</a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn-subir">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+<script>
+  //Boton subir
+  const btnSubir = document.querySelector('.btn-subir');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btnSubir.classList.add('visible');
+    } else {
+      btnSubir.classList.remove('visible');
+    }
+  });
+
+  //Animacion al hacer scroll
+  const elementos = document.querySelectorAll('.caja, .cajita');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elementos.forEach(el => observer.observe(el));
+</script>
+</html>
